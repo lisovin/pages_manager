@@ -1,0 +1,27 @@
+<div id="post_template">
+    <header class="bar bar-nav">
+        <a class="icon icon-left-nav pull-left" data-bind="click: cancel"></a>
+        <h1 class="title" data-bind="text: name"></h1>
+        <div class="pull-right">
+            <a class="icon fa fa-share-square-o" data-bind="click: save"></a>
+        </div>
+    </header>
+    <div class="content input-group">
+        <ul class="table-view pull-up">
+          <li class="table-view-cell">
+            Published on the Page
+            <!-- ko component: {
+                name: 'ratchet-toggle',
+                params: { isOn: isPublished }
+            } -->
+            <!-- /ko -->
+          </li>
+        </ul>
+        <textarea style="height:calc(100% - 64px)" placeholder="What have you been up to?" data-bind="value: content"></textarea>
+    </div>
+<!--
+    <form style="overflow:none"class="input-group content">
+        <textarea style="height:calc(100% - 5px)" placeholder="Post text"></textarea>
+    </form>
+    -->
+</div>

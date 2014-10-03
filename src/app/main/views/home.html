@@ -1,0 +1,23 @@
+<div id="home_template">
+    <header class="bar bar-nav">
+        <h1 class="title">PAGES</h1>
+        <div class="pull-right">
+            <a class="icon fa fa-power-off" data-bind="click: logout"></a>
+        </div>
+    </header>
+    <div class="pages content">
+        <div class="card">
+            <ul class="table-view" data-bind="foreach: pages">
+                <li class="table-view-cell media">
+                    <a class="navigate-right" data-bind="click: showPage">
+                        <span class="fa fa-flag fa-2x fa-flip-horizontal media-object pull-left"></span>
+                        <div class="media-body">
+                            <span class="page__title" data-bind="text: name"></span>
+                            <p><span class="page__category" data-bind="text: category"></span></p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+{
+  "name": "myapp1",
+  "version": "0.0.0",
+  "dependencies": {
+    "requirejs": "latest",
+    "almond": "latest",
+    "scalejs": "lisovin/scalejs",
+    "package": "lisovin/scalejs.mvvm#dev",
+    "scalejs.linq-linqjs": "lisovin/scalejs.linq-linqjs#~3.0.3"
+  },
+  "devDependencies": {
+    "ratchet": "~2.0.2",
+    "package": "lisovin/scalejs.mvvm#dev",
+    "scalejs.statechart-scion": "lisovin/scalejs.statechart-scion#dev",
+    "scalejs.mvvm": "lisovin/scalejs.mvvm#dev",
+    "font-awesome": "~4.2.0",
+    "moment": "~2.8.3",
+    "hello": "~1.1.5"
+  },
+  "overrides": {
+    "text": {
+      "main": "text.js"
+    }
+  }
+}

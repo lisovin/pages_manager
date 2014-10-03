@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "PagesManager": {
+            "applicationId": "6vIrfGYRscMfxjpRfiyQ1XE7cTQVUIvYciaHlldB", 
+            "masterKey": "KbCqVCz3pTmwPQC0TEQamU7oLUwWUBATBsmlJnom"
+        }, 
+        "_default": {
+            "link": "PagesManager"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.3.0"
+    }
+}

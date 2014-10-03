@@ -1,0 +1,60 @@
+<div id="page_template">
+    <header class="bar bar-nav">
+        <a class="icon icon-left-nav pull-left" data-bind="click: showPages"></a>
+        <h1 class="title" data-bind="text: name"></h1>
+        <div class="pull-right">
+            <a class="icon icon-up-nav" data-bind="click: showPrevPage, css: { disabled: !upButtonEnabled() }"></a>
+            &nbsp;
+            <a class="icon icon-down-nav" data-bind="click: showNextPage, css: { disabled: !downButtonEnabled() }"></a>
+        </div>
+    </header>
+    <div class="bar bar-header-secondary">
+        <nav style="border-top: 0px" class="bar-tab">
+            <a class="tab-item" data-bind="click: function () { currentPostsGroup(published); }, css: { active: currentPostsGroup() === published}">
+                <span class="fa fa-globe"></span>
+                <span>Published</span>
+            </a>
+            <a class="tab-item" data-bind="click: function () { currentPostsGroup(unpublished); }, css: { active: currentPostsGroup() === unpublished}">
+                <span class="fa fa-moon-o"></span>
+                <span>Unpublished</span>
+            </a>
+            <a class="tab-item" data-bind="click: function () { currentPostsGroup(scheduled); }, css: { active: currentPostsGroup() === scheduled }">
+                <span class="fa fa-clock-o"></span>
+                <span>Scheduled</span>
+            </a>
+        </nav>
+    </div>
+    <div style="padding-right: 6px" class="content">
+        <ul style="margin-bottom: 51px" class="table-view pull-up" data-bind="foreach: currentPostsGroup().posts">
+            <li class="table-view-cell media">
+            <!--
+                <img class="media-object pull-left" src="http://placehold.it/42x42">
+            -->
+                <span class="fa fa-flag fa-3x fa-flip-horizontal media-object pull-left"></span>
+                <div class="media-body post">
+                    <div class="postedBy" data-bind="text: from.name"></div>
+                    <div class="date" data-bind="text: calendar"></div>
+                    <div class="badge">
+                        <span class="fa fa-user"></span>
+                        <span data-bind="text: uniqueImpressions"></span>
+                    </div>
+                </div>
+                <div class="media-content" data-bind="html: content"></div>
+            </li>
+        </ul>
+    </div>
+    <nav class="bar bar-tab">
+      <a class="tab-item" data-bind="click: createNewPost">
+        <span class="fa fa-pencil-square-o fa-lg"></span>
+      </a>
+      <a class="tab-item" data-bind="click: createNewPost">
+        <span class="fa fa-external-link fa-lg"></span>
+      </a>
+      <a class="tab-item" data-bind="click: createNewPost">
+        <span class="fa fa-camera fa-lg"></span>
+      </a>
+      <a class="tab-item" data-bind="click: createNewPost">
+        <span class="fa fa-video-camera fa-lg"></span>
+      </a>
+    </nav>
+</div>
